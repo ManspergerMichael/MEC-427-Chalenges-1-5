@@ -1,0 +1,23 @@
+# Scripts folder - deployment and utility scripts
+scripts/
+
+# Libraries folder - Adafruit CircuitPython library bundles
+libraries/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# CircuitPython
+*.uf2

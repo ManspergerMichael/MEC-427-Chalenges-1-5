@@ -8,7 +8,7 @@ from adafruit_circuitplayground import cp
 touch_pad = touchio.TouchIn(board.A1)
 
 # Set up some initial variables
-threshold = 1000  # You may need to adjust this value
+threshold = 2500  # Ambient ~1700, water ~3250
 led_index = 0    # Which NeoPixel to light up
 
 # Initialize NeoPixels
@@ -30,5 +30,6 @@ while True:
     print(f"Raw capacitive value: {touch_pad.raw_value}")
 
     # Small delay to prevent overwhelming the serial console
+    time.sleep(0.1)
     time.sleep(0.1)
     time.sleep(0.1)

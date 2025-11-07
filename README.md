@@ -8,14 +8,16 @@ Build and demonstrate a fluid control system using a 6-inch PVC end-cap tank sus
 
 ## Challenge 1 — Fluid Level Sensor (Capacitive)
 
+- **Location**: `Challenge_1/code.py`
 - Use CPX capacitive touch (`touchio.TouchIn`) on A1 to sense water presence via an alligator-clip probe.
-- Calibrate a threshold (start ≈ 1000, adjust during testing) and provide feedback with NeoPixels + serial prints.
+- Includes on-device visual calibration UI (NeoPixel bar + threshold marker) and saves threshold to `cal.txt`.
 - Goal: Reliably detect when water reaches the probe depth.
 
 ## Challenge 2 — Voting Sensor System (Redundancy)
 
+- **Location**: `Challenge_2/code.py`
 - Expand to three probes on pads A1–A3, positioned at similar heights.
-- Implement majority voting: “level reached” when ≥2 sensors exceed the threshold.
+- Implement majority voting: "level reached" when ≥2 sensors exceed the threshold.
 - Goal: Robust detection that tolerates a single sensor fault or noise.
 
 ## Challenge 3 — Smart Actuator System (Pinch Valve)

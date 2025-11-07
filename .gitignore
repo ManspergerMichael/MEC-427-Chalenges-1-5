@@ -4,6 +4,8 @@ scripts/
 # Libraries folder - Adafruit CircuitPython library bundles
 libraries/
 
+
+
 # Python cache
 __pycache__/
 *.pyc

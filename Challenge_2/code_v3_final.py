@@ -55,8 +55,8 @@ prev_btn_b = False
 BAR_SPAN_COUNTS = 2000
 MARGIN_STEP_COUNTS = 100
 
-# Smoothing - Balanced for stable setup with good probe contact
-SMOOTHING_ALPHA = 0.3
+# Smoothing
+SMOOTHING_ALPHA = 0.25
 smoothed_values = [None, None, None]
 
 # Debug
@@ -107,31 +107,19 @@ while True:
     for i in range(3):
         raw_values[i] = smoothed_values[i]
     
-    # For display: use the maximum absolute delta magnitude across all pads
-    # This handles both positive and negative delta changes
-    max_abs_delta = 0
-    display_baseline_used = dry_baselines[0]
+    # Use max for display
+    raw_value = raw_values[0]
+    if raw_values[1] > raw_value:
+        raw_value = raw_values[1]
+    if raw_values[2] > raw_value:
+        raw_value = raw_values[2]
+    
+    # Check if any pad triggered
+    any_triggered = False
     for i in range(3):
-        delta = raw_values[i] - dry_baselines[i]
-        if delta < 0:
-            delta = -delta  # Make positive (absolute value)
-        if delta > max_abs_delta:
-            max_abs_delta = delta
-            display_baseline_used = dry_baselines[i]
-    
-    # Create a virtual "raw_value" for display that's always above baseline
-    raw_value = display_baseline_used + max_abs_delta
-    
-    # Check if majority of pads triggered (2 out of 3 voting logic)
-    triggered_count = 0
-    for i in range(3):
-        delta = raw_values[i] - dry_baselines[i]
-        # Count how many sensors exceed threshold (positive or negative)
-        if delta > threshold_margin or delta < -threshold_margin:
-            triggered_count = triggered_count + 1
-    
-    # Require at least 2 out of 3 sensors to agree
-    any_triggered = triggered_count >= 2
+        if raw_values[i] > detection_thresholds[i]:
+            any_triggered = True
+            break
     
     if any_triggered:
         wet_count = min(wet_count + 1, 3)
@@ -151,12 +139,10 @@ while True:
         thr_hi = []
         wet_per_pad = []
         for i in range(3):
-            delta = raw_values[i] - dry_baselines[i]
-            deltas.append(delta)
+            deltas.append(raw_values[i] - dry_baselines[i])
             thr_lo.append(dry_baselines[i] - threshold_margin)
             thr_hi.append(dry_baselines[i] + threshold_margin)
-            # Match the actual detection logic: trigger on absolute delta
-            wet_per_pad.append(delta > threshold_margin or delta < -threshold_margin)
+            wet_per_pad.append(raw_values[i] > detection_thresholds[i])
         
         print("r:", raw_values, "d:", deltas, "thr_lo:", thr_lo, "thr_hi:", thr_hi, "wet:", wet_per_pad, "maj:", is_wet, "margin:", threshold_margin)
     

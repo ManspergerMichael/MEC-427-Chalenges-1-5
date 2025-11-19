@@ -1,9 +1,11 @@
 # Combined Smart Sensor and Actuator Development Plan for Sensors and Actuators Class
 
 ## Objective
+
 Build and demonstrate a fluid control system using a 6-inch PVC end cap tank suspended by a 1/2-inch PVC pipe tripod, with water level detection via three CPX capacitive touch sensors using alligator clips, a voting system for reliability, and a 3D-printed tube-pinch valve controlled by a TowerPro SG92R servo to prevent overflow. Smart features are to be determined (TBD).
 
 ## Project Overview
+
 - **Setup**: A 6-inch Schedule 40 PVC end cap (~711-1184 mL, ~1.5-2.5 inch depth) as the tank, suspended 6-12 inches above a lower container (e.g., 500-1000 mL cup) via a tripod made of 1/2-inch PVC pipes. Water flows through a 1/4-inch tube, controlled by a servo-driven 3D-printed pinch valve.
 - **Challenge 1 (Fluid Level Sensor)**: Use CPX capacitive touch pads (A1-A3) with alligator clips to detect water level in the lower container.
 - **Challenge 2 (Voting Sensor System)**: Implement three capacitive sensors (alligator clips) with majority voting (≥2 sensors detect water) for robust detection.
@@ -21,6 +23,7 @@ Build and demonstrate a fluid control system using a 6-inch PVC end cap tank sus
 ## Development Plan
 
 ### Step 1: Build Fluid Level Sensor (Challenge 1, 2-3 Days)
+
 - **Task**: Create a single capacitive water level sensor.
   - Attach an alligator clip to CPX pad A1, with the metal jaw positioned in the lower container.
   - Insulate clip jaw partially with electrical tape, leaving ~0.5 cm² exposed for water contact.
@@ -29,14 +32,16 @@ Build and demonstrate a fluid control system using a 6-inch PVC end cap tank sus
 - **Milestone**: Code detecting water level reliably, logged via serial monitor.
 
 ### Step 2: Implement Voting Sensor System (Challenge 2, 3-4 Days)
+
 - **Task**: Expand to three capacitive sensors for voting.
   - Attach alligator clips to CPX pads A1-A3, placed at similar heights in the lower container for redundancy.
   - Insulate each clip’s jaw to prevent shorting; secure to container with tape/3D-printed holder.
   - Program voting logic: If ≥2 clips exceed threshold, set “level reached” flag.
   - Test faults: Disconnect one clip to ensure voting ignores it.
-- **Milestone**: Code and hardware triggering “level reached” via majority vote, with NeoPixel feedback.
+- **Milestone**: Code and hardware triggering "level reached" via majority vote, with NeoPixel feedback.
 
 ### Step 3: Build and Integrate 3D-Printed Pinch Valve (Challenge 3, 3-4 Days)
+
 - **Task**: Construct tank and valve, integrate with sensors.
   - **Tank Setup**:
     - Drill 1/4-inch hole in side of 6-inch PVC end cap (~0.5 inches from bottom).
@@ -54,6 +59,7 @@ Build and demonstrate a fluid control system using a 6-inch PVC end cap tank sus
 - **Milestone**: Prototype where sensors trigger servo to pinch tube, stopping flow.
 
 ### Step 4: Test and Validate System (2-3 Days)
+
 - **Task**: Run end-to-end tests.
   - Scenarios: Normal fill (valve closes on detection), single sensor fault (voting handles it), low/high water starts.
   - Measure: Detection accuracy (>95%), response time (<1s), voting reliability.
@@ -62,6 +68,7 @@ Build and demonstrate a fluid control system using a 6-inch PVC end cap tank sus
 - **Milestone**: Demo video showing system preventing overflow in multiple trials.
 
 ### Step 5: Analyze, Optimize, and Document (2-3 Days)
+
 - **Task**: Evaluate and refine.
   - Analyze: Voting effectiveness, servo reliability, system performance.
   - Optimize: Tune threshold, adjust 3D print for tighter pinch.
@@ -70,6 +77,7 @@ Build and demonstrate a fluid control system using a 6-inch PVC end cap tank sus
 - **Milestone**: Final report and presentation slides.
 
 ## Timeline
+
 - **Total Duration**: 12-17 days.
 - **Week 1**: Steps 1-2 (Sensors and voting).
 - **Week 2**: Steps 3-4 (Valve, tripod, testing).
@@ -77,6 +85,7 @@ Build and demonstrate a fluid control system using a 6-inch PVC end cap tank sus
 - **Key Deadline**: Align with class submission.
 
 ## Resources
+
 - **Hardware**: Adafruit CPX, SG92R servo (from kit), 6-inch PVC end cap, 1/2-inch PVC pipes, 3/4-inch tee, aquarium tubing, zip ties, silicone, alligator clips (from kit), electrical tape.
 - **Software**: CircuitPython (adafruit.com), Mu editor.
 - **3D Printing**: Tinkercad for design; PLA filament at school makerspace.
@@ -88,6 +97,7 @@ Build and demonstrate a fluid control system using a 6-inch PVC end cap tank sus
 - **Environment**: Workbench, computer, 3D printer access.
 
 ## Risks and Mitigation
+
 - **Risk**: Capacitive clips misfire (e.g., humidity, shorting).
   - **Mitigation**: Insulate jaws with tape/heat-shrink, calibrate thresholds, space clips apart.
 - **Risk**: SG92R lacks torque to pinch tube.
@@ -98,6 +108,7 @@ Build and demonstrate a fluid control system using a 6-inch PVC end cap tank sus
   - **Mitigation**: Secure with tape or 3D-printed holder.
 
 ## Success Criteria
+
 - Prototype fills container and stops via servo-driven pinch valve on level detection.
 - Voting system handles single-sensor faults without false closure.
 - Report addresses all challenges with code, demo, and performance analysis.

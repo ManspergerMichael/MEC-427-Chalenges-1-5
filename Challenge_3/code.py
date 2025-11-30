@@ -1,7 +1,8 @@
 """Smart actuator: voting sensor + servo-controlled pinch valve.
 
-3-probe voting (A1-A3) triggers SG92R servo (A6) to close pinch valve.
+3-probe voting (A1, A3, A5) triggers SG92R servo (A6) to close pinch valve.
 Uses minimal PWM approach for power stability with external servo power.
+Non-adjacent pads reduce capacitive cross-talk between sensors.
 """
 
 import time
@@ -11,24 +12,25 @@ import pwmio
 import touchio
 from adafruit_circuitplayground import cp
 
-# Initialize sensors
+# Initialize sensors on non-adjacent pads to reduce cross-talk
 touch_pads = [
     touchio.TouchIn(board.A1),
-    touchio.TouchIn(board.A2),
     touchio.TouchIn(board.A3),
+    touchio.TouchIn(board.A5),
 ]
 
-# Servo PWM values (50Hz, 200ms pulse duration)
+# Servo PWM values (50Hz)
 SERVO_OPEN = 3277      # 1.0ms pulse = 0°
 SERVO_CLOSED = 4915    # 1.5ms pulse = 90°
 
+# Keep PWM active for servo control
+servo_pwm = pwmio.PWMOut(board.A6, frequency=50)
+
 
 def move_servo(duty_cycle):
-    """Send brief PWM pulse to servo then deinit."""
-    pwm = pwmio.PWMOut(board.A6, frequency=50)
-    pwm.duty_cycle = duty_cycle
-    time.sleep(0.2)  # 200ms pulse
-    pwm.deinit()
+    """Move servo and hold position with continuous PWM."""
+    servo_pwm.duty_cycle = duty_cycle
+    time.sleep(0.5)  # Give servo time to reach position
 
 
 # Initialize servo to open position
@@ -57,14 +59,15 @@ cp.pixels[0] = (255, 140, 0)
 dry_baselines = [capture_baseline(p) for p in touch_pads]
 cp.pixels[0] = (0, 0, 0)
 print(
-    f"Baselines: A1={dry_baselines[0]}, A2={dry_baselines[1]}, A3={dry_baselines[2]}")
+    f"Baselines: A1={dry_baselines[0]}, "
+    f"A3={dry_baselines[1]}, A5={dry_baselines[2]}")
 
 # Load margin
 threshold_margin = 1000
 try:
     with open("cal.txt", "r") as f:
         threshold_margin = int(f.read().strip())
-except:
+except (OSError, ValueError):
     pass
 
 thr_lo = [b - threshold_margin for b in dry_baselines]

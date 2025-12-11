@@ -47,15 +47,6 @@ def run_reverse():
     servo_pwm.duty_cycle = SERVO_REVERSE
     cp.pixels.fill((255, 0, 0))
     print("REVERSE")
-    servo_pwm.duty_cycle = SERVO_FORWARD
-    cp.pixels.fill((0, 255, 0))
-    print("FORWARD")
-
-
-def run_reverse():
-    servo_pwm.duty_cycle = SERVO_REVERSE
-    cp.pixels.fill((255, 0, 0))
-    print("REVERSE")
 
 
 print("Ready")
@@ -92,7 +83,7 @@ while True:
                             run_reverse()
                         elif code[1] == 0:
                             stop_servo()
-            except:
+            except Exception:
                 pass
 
     prev_a = btn_a

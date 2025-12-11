@@ -1,0 +1,130 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="YaE7IE5XdeHdh-xI0kQP">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P7DoVzCWf89mKqioDJfA-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#00FF00;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-1" target="P7DoVzCWf89mKqioDJfA-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="338" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-7" value="Motor Control 1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-6">
+          <mxGeometry x="-0.1876" y="4" relative="1" as="geometry">
+            <mxPoint x="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-8" value="Capacitive Touch&amp;nbsp;&lt;div&gt;Sensor A1&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-6">
+          <mxGeometry x="-0.7002" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-9" value="INI1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-6">
+          <mxGeometry x="0.7875" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#00FF00;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-1" target="P7DoVzCWf89mKqioDJfA-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-11" value="INI2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-10">
+          <mxGeometry x="0.8154" y="3" relative="1" as="geometry">
+            <mxPoint x="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-12" value="Capacitive Touch&lt;br&gt;Sensor A2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-10">
+          <mxGeometry x="-0.8821" y="2" relative="1" as="geometry">
+            <mxPoint x="27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-13" value="Motor Control 2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-10">
+          <mxGeometry x="-0.041" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-15" value="GND" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-14">
+          <mxGeometry x="-0.2566" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-1" value="AdaFruit CPX" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="90" y="120" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-2" target="P7DoVzCWf89mKqioDJfA-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;strokeColor=#000000;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="140" y="265" />
+              <mxPoint x="140" y="221" />
+              <mxPoint x="200" y="221" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-2" value="3.7V Microcontroller Power" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-3" target="P7DoVzCWf89mKqioDJfA-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-18" value="VCC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-17">
+          <mxGeometry x="0.808" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;strokeColor=#000000;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-3" value="7.4V Motor Power" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-4" value="N20 Motor" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="650" y="310" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-19" value="GND" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-16">
+          <mxGeometry x="-0.5043" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-5" target="P7DoVzCWf89mKqioDJfA-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-22" value="Out 1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-20">
+          <mxGeometry x="-0.2164" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="P7DoVzCWf89mKqioDJfA-5" target="P7DoVzCWf89mKqioDJfA-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-23" value="Out 2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="P7DoVzCWf89mKqioDJfA-21">
+          <mxGeometry x="-0.0476" relative="1" as="geometry">
+            <mxPoint y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P7DoVzCWf89mKqioDJfA-5" value="Motor Control Board" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

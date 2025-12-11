@@ -25,7 +25,7 @@ print("=== Motor Remote Control ===")
 print("Button A: Forward")
 print("Button B: Reverse")
 print("Switch Left: Stop")
-print()
+print("")
 
 # IR transmitter setup (uses pin A1)
 ir_transmitter = pulseio.PulseOut(
@@ -45,7 +45,7 @@ cp.pixels.fill((0, 0, 255))  # Blue = ready
 
 def send_command(cmd, name):
     """Send IR command and provide feedback."""
-    print(f"Sending: {name}")
+    print("Sending:", name)
     cp.pixels.fill((255, 255, 0))  # Yellow while transmitting
 
     # Send command 3 times for reliability
@@ -59,11 +59,12 @@ def send_command(cmd, name):
 
 
 prev_a = False
+prev_a = False
 prev_b = False
 prev_switch = cp.switch
 
-print("Ready to send commands\n")
-
+print("Ready to send commands")
+print("")
 while True:
     btn_a = cp.button_a
     btn_b = cp.button_b
